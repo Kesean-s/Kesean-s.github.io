@@ -10,18 +10,19 @@
 <title>汇编语言笔记 - KByte&#39;BLOG</title>
 
 
-    <meta name="description" content="第二章8086： 字长16位 数据总线16位 地址总线20位，可以确定寻址空间 寻址空间1MB =  2^20^B = 2^16^*2^4^ 双字  计算机结构： 运算器 控制器 存储器 I/O设备 寄存器  寄存器：通用寄存器 数据寄存器：AX，BX，CX，DX（可16位可8位访问） 每个名称前面加E，表示32位 AH，BH，CH，DH表示16位，AL，BL，CL，DL表示8位 AX：累加器 B">
+    <meta name="description" content="汇编语言的课堂笔记">
+<meta name="keywords" content="汇编语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编语言笔记">
 <meta property="og:url" content="http://yoursite.com/2019/10/16/汇编/index.html">
 <meta property="og:site_name" content="KByte&#39;BLOG">
-<meta property="og:description" content="第二章8086： 字长16位 数据总线16位 地址总线20位，可以确定寻址空间 寻址空间1MB =  2^20^B = 2^16^*2^4^ 双字  计算机结构： 运算器 控制器 存储器 I/O设备 寄存器  寄存器：通用寄存器 数据寄存器：AX，BX，CX，DX（可16位可8位访问） 每个名称前面加E，表示32位 AH，BH，CH，DH表示16位，AL，BL，CL，DL表示8位 AX：累加器 B">
+<meta property="og:description" content="汇编语言的课堂笔记">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-16T04:36:43.692Z">
+<meta property="og:updated_time" content="2019-10-16T13:01:39.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编语言笔记">
-<meta name="twitter:description" content="第二章8086： 字长16位 数据总线16位 地址总线20位，可以确定寻址空间 寻址空间1MB =  2^20^B = 2^16^*2^4^ 双字  计算机结构： 运算器 控制器 存储器 I/O设备 寄存器  寄存器：通用寄存器 数据寄存器：AX，BX，CX，DX（可16位可8位访问） 每个名称前面加E，表示32位 AH，BH，CH，DH表示16位，AL，BL，CL，DL表示8位 AX：累加器 B">
+<meta name="twitter:description" content="汇编语言的课堂笔记">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -74,7 +75,7 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -92,29 +93,30 @@
                 href="/">主页</a>
                 
                 <a class="navbar-item"
-                href="/archives">Archives</a>
+                href="/archives">档案</a>
                 
                 <a class="navbar-item"
-                href="/categories">Categories</a>
+                href="/categories">分类</a>
                 
                 <a class="navbar-item"
-                href="/tags">Tags</a>
-                
-                <a class="navbar-item"
-                href="/about">About</a>
+                href="/tags">标签</a>
                 
             </div>
             
             <div class="navbar-end">
                 
                     
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/KByte-s">
+                    <a class="navbar-item" target="_blank" title="我的GitHub" href="https://github.com/KByte-s">
                         
                         <i class="fab fa-github"></i>
                         
                     </a>
                     
                 
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
                 
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
@@ -129,20 +131,24 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-15T17:15:46.299Z">2019-10-16</time>
+                <time class="level-item has-text-grey" datetime="2019-10-16T11:45:00.000Z">2019-10-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/学习/">学习</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    25 分钟 读完 (大约 3681 个字)
+                    25 分钟 读完 (大约 3691 个字)
                 </span>
                 
                 
@@ -155,7 +161,10 @@
             
         </h1>
         <div class="content">
-            <h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="8086："><a href="#8086：" class="headerlink" title="8086："></a>8086：</h3><ul>
+            <p>汇编语言的课堂笔记</p>
+<a id="more"></a>
+
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="8086："><a href="#8086：" class="headerlink" title="8086："></a>8086：</h3><ul>
 <li>字长16位</li>
 <li>数据总线16位</li>
 <li>地址总线20位，可以确定寻址空间</li>
@@ -262,7 +271,20 @@
 
         </div>
         
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/汇编语言/">汇编语言</a>
+                </div>
+            </div>
+        </div>
         
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
@@ -326,7 +348,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -343,6 +365,10 @@
                         KByte
                     </p>
                     
+                    
+                    <p class="is-size-6 is-block">
+                        宁愿苦战，不愿苦熬。
+                    </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
@@ -370,7 +396,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        1
                     </p>
                 </div>
             </div>
@@ -380,62 +406,129 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        2
                     </p>
                 </div>
             </div>
         </nav>
         
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
+            <a class="level-item button is-link is-rounded" href="https://github.com/KByte-s" target="_blank">
                 关注我</a>
         </div>
         
         
         
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank"
-                title="Github" href="https://github.com/KByte-s">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank"
-                title="Facebook" href="https://github.com/KByte-s">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank"
-                title="Twitter" href="https://github.com/KByte-s">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank"
-                title="Dribbble" href="https://github.com/KByte-s">
-                
-                <i class="fab fa-dribbble"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank"
-                title="RSS" href="https://github.com/KByte-s">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
     </div>
 </div>
     
         
+<div class="card widget" id="toc" style="max-height: 500px;overflow: auto;">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#第二章">
+        <span class="has-mr-6">1</span>
+        <span>第二章</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#8086：">
+        <span class="has-mr-6">1.1</span>
+        <span>8086：</span>
+        </a></li><li>
+        <a class="is-flex" href="#计算机结构：">
+        <span class="has-mr-6">1.2</span>
+        <span>计算机结构：</span>
+        </a></li><li>
+        <a class="is-flex" href="#寄存器：">
+        <span class="has-mr-6">1.3</span>
+        <span>寄存器：</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#通用寄存器">
+        <span class="has-mr-6">1.3.1</span>
+        <span>通用寄存器</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#存储器">
+        <span class="has-mr-6">1.4</span>
+        <span>存储器</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#第三章">
+        <span class="has-mr-6">2</span>
+        <span>第三章</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#数据相关寻址方式">
+        <span class="has-mr-6">2.1</span>
+        <span>数据相关寻址方式</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#1-立即寻址方式">
+        <span class="has-mr-6">2.1.1</span>
+        <span>1.立即寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-寄存器寻址方式">
+        <span class="has-mr-6">2.1.2</span>
+        <span>2.寄存器寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-直接寻址方式">
+        <span class="has-mr-6">2.1.3</span>
+        <span>3.直接寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#4-寄存器间接寻址方式">
+        <span class="has-mr-6">2.1.4</span>
+        <span>4.寄存器间接寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#5-寄存器相对寻址方式">
+        <span class="has-mr-6">2.1.5</span>
+        <span>5.寄存器相对寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#6-基址变址寻址方式">
+        <span class="has-mr-6">2.1.6</span>
+        <span>6.基址变址寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#7-相对基址变址寻址方式">
+        <span class="has-mr-6">2.1.7</span>
+        <span>7.相对基址变址寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#8-比例变址寻址方式">
+        <span class="has-mr-6">2.1.8</span>
+        <span>8.比例变址寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#9-基址比例变址寻址方式">
+        <span class="has-mr-6">2.1.9</span>
+        <span>9.基址比例变址寻址方式</span>
+        </a></li><li>
+        <a class="is-flex" href="#10-相对基址比例变址寻址方式">
+        <span class="has-mr-6">2.1.10</span>
+        <span>10.相对基址比例变址寻址方式</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#转移地址相关寻址方式">
+        <span class="has-mr-6">2.2</span>
+        <span>转移地址相关寻址方式</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#1-段内直接寻址">
+        <span class="has-mr-6">2.2.1</span>
+        <span>1.段内直接寻址</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-段内间接寻址">
+        <span class="has-mr-6">2.2.2</span>
+        <span>2.段内间接寻址</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-段间直接寻址">
+        <span class="has-mr-6">2.2.3</span>
+        <span>3.段间直接寻址</span>
+        </a></li><li>
+        <a class="is-flex" href="#4-段间间接寻址">
+        <span class="has-mr-6">2.2.4</span>
+        <span>4.段间间接寻址</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#指令系统">
+        <span class="has-mr-6">2.3</span>
+        <span>指令系统</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
     
         <div class="card widget">
     <div class="card-content">
@@ -446,20 +539,9 @@
         <ul class="menu-list">
         
             <li>
-                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                <a class="level is-mobile" href="https://github.com/KByte-s" target="_blank">
                     <span class="level-left">
-                        <span class="level-item">Hexo</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">hexo.io</span>
-                    </span>
-                </a>
-            </li>
-        
-            <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
-                    <span class="level-left">
-                        <span class="level-item">PPOffice</span>
+                        <span class="level-item">KByte</span>
                     </span>
                     <span class="level-right">
                         <span class="level-item tag">github.com</span>
@@ -481,16 +563,31 @@
                 分类
             </h3>
             <ul class="menu-list">
-            
+            <li>
+        <a class="level is-marginless" href="/categories/学习/">
+            <span class="level-start">
+                <span class="level-item">学习</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
             </ul>
         </div>
     </div>
 </div>
     
-        
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/汇编语言/" style="font-size: 10px;">汇编语言</a>
+    </div>
+</div>
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
+        <div class="column-right-shadow  ">
         
             <div class="card widget">
     <div class="card-content">
@@ -508,10 +605,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-15T17:15:46.299Z">2019-10-16</time></div>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T11:45:00.000Z">2019-10-16</time></div>
                     <a href="/2019/10/16/汇编/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编语言笔记</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/学习/">学习</a>
                     </p>
                 </div>
             </div>
@@ -571,6 +668,20 @@
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hello-world/">
+                        <span class="tag">hello world</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/汇编语言/">
+                        <span class="tag">汇编语言</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -581,99 +692,6 @@
 </div>
 
                 
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2019/10/16/汇编/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编语言笔记">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-15T17:15:46.299Z">2019-10-16</time></div>
-                    <a href="/2019/10/16/汇编/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编语言笔记</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/16/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-15T16:36:48.009Z">2019-10-16</time></div>
-                    <a href="/2019/10/16/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/10/">
-                <span class="level-start">
-                    <span class="level-item">十月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
-    
-</div>
-
             </div>
         </div>
     </section>
