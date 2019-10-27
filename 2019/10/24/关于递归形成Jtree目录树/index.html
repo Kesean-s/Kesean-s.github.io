@@ -7,17 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>标签: hello world - KByte&#39;BLOG</title>
+<title>关于递归形成Jtree目录树 - KByte&#39;BLOG</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="KByte&#39;BLOG">
-<meta property="og:url" content="http://yoursite.com/tags/hello-world/index.html">
+    <meta name="description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。 首先需要用到 Sort.java 1234567891011121314151617181920212223public class Sort &amp;#123;    private String sid;    private String parent;    pub">
+<meta name="keywords" content="swing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于递归形成Jtree目录树">
+<meta property="og:url" content="http://yoursite.com/2019/10/24/关于递归形成Jtree目录树/index.html">
 <meta property="og:site_name" content="KByte&#39;BLOG">
+<meta property="og:description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。 首先需要用到 Sort.java 1234567891011121314151617181920212223public class Sort &amp;#123;    private String sid;    private String parent;    pub">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-10-26T04:38:20.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KByte&#39;BLOG">
+<meta name="twitter:title" content="关于递归形成Jtree目录树">
+<meta name="twitter:description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。 首先需要用到 Sort.java 1234567891011121314151617181920212223public class Sort &amp;#123;    private String sid;    private String parent;    pub">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -70,13 +75,13 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="KByte&#39;BLOG" height="28">
+                <img src="/images/logo.svg" alt="关于递归形成Jtree目录树" height="28">
             
             </a>
         </div>
@@ -109,6 +114,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -122,31 +131,24 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">hello world</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-15T16:36:48.009Z">2019-10-16</time>
+                <time class="level-item has-text-grey" datetime="2019-10-24T11:12:55.000Z">2019-10-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/学习/">学习</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 121 个字)
+                    2 分钟 读完 (大约 262 个字)
                 </span>
                 
                 
@@ -155,36 +157,88 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/10/16/hello-world/">Hello World</a>
+                关于递归形成Jtree目录树
             
         </h1>
         <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="hljs-string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <p>找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。</p>
+<p>首先需要用到</p>
+<p>Sort.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sort</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> String sid;</span><br><span class="line">    <span class="hljs-keyword">private</span> String parent;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Sort</span><span class="hljs-params">(String id, String p)</span> </span>&#123;</span><br><span class="line">        setSid(id);</span><br><span class="line">        setParent(p);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getSid</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> sid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setSid</span><span class="hljs-params">(String sid)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.sid = sid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getParent</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> parent;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setParent</span><span class="hljs-params">(String parent)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.parent = parent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>Dao.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//Dao类</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dao</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> ArrayList&lt;Sort&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Sort&gt;();</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dao</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"001"</span>, <span class="hljs-string">"005"</span>));</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"002"</span>, <span class="hljs-string">"001"</span>));</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"003"</span>, <span class="hljs-string">"002"</span>));</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"004"</span>, <span class="hljs-string">"005"</span>));</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"005"</span>, <span class="hljs-string">"000"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> DefaultMutableTreeNode <span class="hljs-title">BuildTree</span><span class="hljs-params">(DefaultMutableTreeNode pNode)</span></span>&#123;</span><br><span class="line">		DefaultMutableTreeNode cNode;</span><br><span class="line">    	<span class="hljs-keyword">for</span>(Sort menuNode : list) &#123;</span><br><span class="line">    		<span class="hljs-keyword">if</span>(menuNode.getParent().equals(pNode.toString())) &#123;</span><br><span class="line">    			cNode=<span class="hljs-keyword">new</span> DefaultMutableTreeNode(menuNode.getSid());</span><br><span class="line">    			pNode.add(cNode);</span><br><span class="line">            	BuildTree(cNode);</span><br><span class="line">        	&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="hljs-keyword">return</span> pNode;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>然后Jtree的一些设置</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">DefaultMutableTreeNode root;</span><br><span class="line">JTree tree;</span><br><span class="line">Dao treeDao = <span class="hljs-keyword">new</span> Dao();</span><br><span class="line"><span class="hljs-comment">// 初始化root</span></span><br><span class="line">root = <span class="hljs-keyword">new</span> DefaultMutableTreeNode(<span class="hljs-string">"000"</span>);</span><br><span class="line"><span class="hljs-comment">// 树进行初始化，其数据来源是root对象</span></span><br><span class="line">tree = <span class="hljs-keyword">new</span> JTree(root);</span><br><span class="line"><span class="hljs-comment">// 放入JScrollPane中</span></span><br><span class="line">js_West.setViewportView(tree);</span><br><span class="line"><span class="hljs-comment">// 建立树</span></span><br><span class="line">treeDao.BuildTree(root);</span><br><span class="line"><span class="hljs-comment">//设置监听</span></span><br><span class="line">tree.addTreeSelectionListener(<span class="hljs-keyword">new</span> TreeSelectionListener() &#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">valueChanged</span><span class="hljs-params">(TreeSelectionEvent treeSelectionEvent)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"你选择了："</span> + tree.getLastSelectedPathComponent().toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
         </div>
         
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/swing/">swing</a>
+                </div>
+            </div>
+        </div>
         
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/zhi.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wei.png" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/16/cheshi/">
+                <span class="level-item">cheshi</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -193,7 +247,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -268,6 +322,16 @@
 </div>
     
         
+<div class="card widget" id="toc" style="max-height: 500px;overflow: auto;">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            
+        </div>
+    </div>
+</div>
     
         <div class="card widget">
     <div class="card-content">
@@ -334,7 +398,7 @@
 </div>
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
+        <div class="column-right-shadow  ">
         
             <div class="card widget">
     <div class="card-content">
@@ -487,167 +551,6 @@
 </div>
         
         </div>
-    
-</div>
-
-                
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2019/10/24/关于递归形成Jtree目录树/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="关于递归形成Jtree目录树">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-24T11:12:55.000Z">2019-10-24</time></div>
-                    <a href="/2019/10/24/关于递归形成Jtree目录树/" class="title has-link-black-ter is-size-6 has-text-weight-normal">关于递归形成Jtree目录树</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/16/cheshi/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="cheshi">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T15:36:19.000Z">2019-10-16</time></div>
-                    <a href="/2019/10/16/cheshi/" class="title has-link-black-ter is-size-6 has-text-weight-normal">cheshi</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/shi/">shi</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/16/汇编/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编语言笔记">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T11:45:00.000Z">2019-10-16</time></div>
-                    <a href="/2019/10/16/汇编/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编语言笔记</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/16/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-15T16:36:48.009Z">2019-10-16</time></div>
-                    <a href="/2019/10/16/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/10/">
-                <span class="level-start">
-                    <span class="level-item">十月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/ce/">
-                        <span class="tag">ce</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/hello-world/">
-                        <span class="tag">hello world</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/swing/">
-                        <span class="tag">swing</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/汇编语言/">
-                        <span class="tag">汇编语言</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
     
 </div>
 
@@ -661,7 +564,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="KByte&#39;BLOG" height="28">
+                    <img src="/images/logo.svg" alt="关于递归形成Jtree目录树" height="28">
                 
                 </a>
                 <p class="is-size-7">

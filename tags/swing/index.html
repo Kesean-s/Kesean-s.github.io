@@ -7,12 +7,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>标签: hello world - KByte&#39;BLOG</title>
+<title>标签: swing - KByte&#39;BLOG</title>
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="KByte&#39;BLOG">
-<meta property="og:url" content="http://yoursite.com/tags/hello-world/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/swing/index.html">
 <meta property="og:site_name" content="KByte&#39;BLOG">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
@@ -127,7 +127,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">hello world</a></li>
+            <li class="is-active"><a href="#" aria-current="page">swing</a></li>
         </ul>
         </nav>
     </div>
@@ -140,13 +140,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-15T16:36:48.009Z">2019-10-16</time>
+                <time class="level-item has-text-grey" datetime="2019-10-24T11:12:55.000Z">2019-10-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/学习/">学习</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 121 个字)
+                    2 分钟 读完 (大约 262 个字)
                 </span>
                 
                 
@@ -155,23 +159,21 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/10/16/hello-world/">Hello World</a>
+                <a class="has-link-black-ter" href="/2019/10/24/关于递归形成Jtree目录树/">关于递归形成Jtree目录树</a>
             
         </h1>
         <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="hljs-string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <p>找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。</p>
+<p>首先需要用到</p>
+<p>Sort.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sort</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> String sid;</span><br><span class="line">    <span class="hljs-keyword">private</span> String parent;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Sort</span><span class="hljs-params">(String id, String p)</span> </span>&#123;</span><br><span class="line">        setSid(id);</span><br><span class="line">        setParent(p);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getSid</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> sid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setSid</span><span class="hljs-params">(String sid)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.sid = sid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getParent</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> parent;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setParent</span><span class="hljs-params">(String parent)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.parent = parent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>Dao.java</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//Dao类</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dao</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> ArrayList&lt;Sort&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Sort&gt;();</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dao</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"001"</span>, <span class="hljs-string">"005"</span>));</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"002"</span>, <span class="hljs-string">"001"</span>));</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"003"</span>, <span class="hljs-string">"002"</span>));</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"004"</span>, <span class="hljs-string">"005"</span>));</span><br><span class="line">        list.add(<span class="hljs-keyword">new</span> Sort(<span class="hljs-string">"005"</span>, <span class="hljs-string">"000"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> DefaultMutableTreeNode <span class="hljs-title">BuildTree</span><span class="hljs-params">(DefaultMutableTreeNode pNode)</span></span>&#123;</span><br><span class="line">		DefaultMutableTreeNode cNode;</span><br><span class="line">    	<span class="hljs-keyword">for</span>(Sort menuNode : list) &#123;</span><br><span class="line">    		<span class="hljs-keyword">if</span>(menuNode.getParent().equals(pNode.toString())) &#123;</span><br><span class="line">    			cNode=<span class="hljs-keyword">new</span> DefaultMutableTreeNode(menuNode.getSid());</span><br><span class="line">    			pNode.add(cNode);</span><br><span class="line">            	BuildTree(cNode);</span><br><span class="line">        	&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="hljs-keyword">return</span> pNode;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>然后Jtree的一些设置</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">DefaultMutableTreeNode root;</span><br><span class="line">JTree tree;</span><br><span class="line">Dao treeDao = <span class="hljs-keyword">new</span> Dao();</span><br><span class="line"><span class="hljs-comment">// 初始化root</span></span><br><span class="line">root = <span class="hljs-keyword">new</span> DefaultMutableTreeNode(<span class="hljs-string">"000"</span>);</span><br><span class="line"><span class="hljs-comment">// 树进行初始化，其数据来源是root对象</span></span><br><span class="line">tree = <span class="hljs-keyword">new</span> JTree(root);</span><br><span class="line"><span class="hljs-comment">// 放入JScrollPane中</span></span><br><span class="line">js_West.setViewportView(tree);</span><br><span class="line"><span class="hljs-comment">// 建立树</span></span><br><span class="line">treeDao.BuildTree(root);</span><br><span class="line"><span class="hljs-comment">//设置监听</span></span><br><span class="line">tree.addTreeSelectionListener(<span class="hljs-keyword">new</span> TreeSelectionListener() &#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">valueChanged</span><span class="hljs-params">(TreeSelectionEvent treeSelectionEvent)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"你选择了："</span> + tree.getLastSelectedPathComponent().toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
         </div>
         
