@@ -10,19 +10,19 @@
 <title>关于递归形成Jtree目录树 - KByte&#39;BLOG</title>
 
 
-    <meta name="description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。 首先需要用到 Sort.java 1234567891011121314151617181920212223public class Sort &amp;#123;    private String sid;    private String parent;    pub">
+    <meta name="description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。">
 <meta name="keywords" content="swing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于递归形成Jtree目录树">
 <meta property="og:url" content="http://yoursite.com/2019/10/24/关于递归形成Jtree目录树/index.html">
 <meta property="og:site_name" content="KByte&#39;BLOG">
-<meta property="og:description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。 首先需要用到 Sort.java 1234567891011121314151617181920212223public class Sort &amp;#123;    private String sid;    private String parent;    pub">
+<meta property="og:description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-26T04:38:20.822Z">
+<meta property="og:updated_time" content="2019-10-26T04:39:50.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于递归形成Jtree目录树">
-<meta name="twitter:description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。 首先需要用到 Sort.java 1234567891011121314151617181920212223public class Sort &amp;#123;    private String sid;    private String parent;    pub">
+<meta name="twitter:description" content="找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -148,7 +148,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 262 个字)
+                    2 分钟 读完 (大约 263 个字)
                 </span>
                 
                 
@@ -162,6 +162,8 @@
         </h1>
         <div class="content">
             <p>找了一遍好像没找到关于形成递归形成Jtree目录树的文章，正好最近要用到，就写一篇博客来记录一些东西。边改边写吧，可能有一些错误。</p>
+<a id="more"></a>
+
 <p>首先需要用到</p>
 <p>Sort.java</p>
 <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sort</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> String sid;</span><br><span class="line">    <span class="hljs-keyword">private</span> String parent;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Sort</span><span class="hljs-params">(String id, String p)</span> </span>&#123;</span><br><span class="line">        setSid(id);</span><br><span class="line">        setParent(p);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getSid</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> sid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setSid</span><span class="hljs-params">(String sid)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.sid = sid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getParent</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> parent;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setParent</span><span class="hljs-params">(String parent)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.parent = parent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -229,10 +231,17 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/11/23/云主机部署Tomcat服务器/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">云主机部署Tomcat服务器</span>
+            </a>
+        </div>
+        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/16/cheshi/">
-                <span class="level-item">cheshi</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/16/汇编/">
+                <span class="level-item">汇编语言笔记</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -295,7 +304,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        1
                     </p>
                 </div>
             </div>
@@ -367,20 +376,12 @@
             </h3>
             <ul class="menu-list">
             <li>
-        <a class="level is-marginless" href="/categories/shi/">
-            <span class="level-start">
-                <span class="level-item">shi</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
         <a class="level is-marginless" href="/categories/学习/">
             <span class="level-start">
                 <span class="level-item">学习</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li>
             </ul>
@@ -393,7 +394,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/ce/" style="font-size: 10px;">ce</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/swing/" style="font-size: 10px;">swing</a> <a href="/tags/汇编语言/" style="font-size: 10px;">汇编语言</a>
+        <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/swing/" style="font-size: 10px;">swing</a> <a href="/tags/云主机/" style="font-size: 10px;">云主机</a> <a href="/tags/汇编语言/" style="font-size: 10px;">汇编语言</a>
     </div>
 </div>
     
@@ -405,6 +406,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/11/23/云主机部署Tomcat服务器/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="云主机部署Tomcat服务器">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-23T07:03:56.000Z">2019-11-23</time></div>
+                    <a href="/2019/11/23/云主机部署Tomcat服务器/" class="title has-link-black-ter is-size-6 has-text-weight-normal">云主机部署Tomcat服务器</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/学习/">学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -420,25 +440,6 @@
                     <a href="/2019/10/24/关于递归形成Jtree目录树/" class="title has-link-black-ter is-size-6 has-text-weight-normal">关于递归形成Jtree目录树</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/16/cheshi/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="cheshi">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T15:36:19.000Z">2019-10-16</time></div>
-                    <a href="/2019/10/16/cheshi/" class="title has-link-black-ter is-size-6 has-text-weight-normal">cheshi</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/shi/">shi</a>
                     </p>
                 </div>
             </div>
@@ -494,12 +495,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/10/">
                 <span class="level-start">
                     <span class="level-item">十月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -518,13 +530,6 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/ce/">
-                        <span class="tag">ce</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
                     <a class="tags has-addons" href="/tags/hello-world/">
                         <span class="tag">hello world</span>
                         <span class="tag is-grey">1</span>
@@ -534,6 +539,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/swing/">
                         <span class="tag">swing</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/云主机/">
+                        <span class="tag">云主机</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>

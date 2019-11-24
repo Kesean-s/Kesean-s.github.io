@@ -7,17 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>归档 - KByte&#39;BLOG</title>
+<title>云主机部署Tomcat服务器 - KByte&#39;BLOG</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="KByte&#39;BLOG">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+    <meta name="description" content="我在学习javaweb后对javaweb发布的一些尝试，使用阿里云主机，安装jdk11，tomcat9和mysql，并成功跑起来">
+<meta name="keywords" content="云主机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="云主机部署Tomcat服务器">
+<meta property="og:url" content="http://yoursite.com/2019/11/23/云主机部署Tomcat服务器/index.html">
 <meta property="og:site_name" content="KByte&#39;BLOG">
+<meta property="og:description" content="我在学习javaweb后对javaweb发布的一些尝试，使用阿里云主机，安装jdk11，tomcat9和mysql，并成功跑起来">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-11-24T07:45:03.065Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KByte&#39;BLOG">
+<meta name="twitter:title" content="云主机部署Tomcat服务器">
+<meta name="twitter:description" content="我在学习javaweb后对javaweb发布的一些尝试，使用阿里云主机，安装jdk11，tomcat9和mysql，并成功跑起来">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -70,13 +75,13 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="KByte&#39;BLOG" height="28">
+                <img src="/images/logo.svg" alt="云主机部署Tomcat服务器" height="28">
             
             </a>
         </div>
@@ -87,7 +92,7 @@
                 <a class="navbar-item"
                 href="/">主页</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/archives">档案</a>
                 
                 <a class="navbar-item"
@@ -109,6 +114,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -122,99 +131,179 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
         
-<div class="card widget">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-23T07:03:56.000Z">2019-11-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/学习/">学习</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 735 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                云主机部署Tomcat服务器
+            
+        </h1>
+        <div class="content">
+            <p>我在学习javaweb后对javaweb发布的一些尝试，使用阿里云主机，安装jdk11，tomcat9和mysql，并成功跑起来</p>
+<a id="more"></a>
+
+<h2 id="购买云主机"><a href="#购买云主机" class="headerlink" title="购买云主机"></a>购买云主机</h2><p>搜索云翼计划，<br><a href="https://promotion.aliyun.com/ntms/act/campus2018.html" target="_blank" rel="noopener">https://promotion.aliyun.com/ntms/act/campus2018.html</a><br>选则购买轻量应用服务器9.5/月<br>预装Ubuntu 16.04 64位<br>地域华东二上海，选近的就是了，<br>然后是付款付款付款，<br>支付成功后进入 管理控制台</p>
+<h2 id="Xshell和Xftp"><a href="#Xshell和Xftp" class="headerlink" title="Xshell和Xftp"></a>Xshell和Xftp</h2><p>Xftp：<a href="https://www.netsarang.com/zh/downloading/?token=cjR0UzNEUEFZdUlLRHFBelBYNkxpd0A0bFhJbnJaY2FrZ242OE4wX29oQVpR" target="_blank" rel="noopener">https://www.netsarang.com/zh/downloading/?token=cjR0UzNEUEFZdUlLRHFBelBYNkxpd0A0bFhJbnJaY2FrZ242OE4wX29oQVpR</a></p>
+<p>Xshell：<a href="https://www.netsarang.com/zh/downloading/?token=V2Z0VmpGdUNtbkRKU2FwMUc1TG93Z0A0bFhJbnJaY2FrZ242OE4wX29oQVpR" target="_blank" rel="noopener">https://www.netsarang.com/zh/downloading/?token=V2Z0VmpGdUNtbkRKU2FwMUc1TG93Z0A0bFhJbnJaY2FrZ242OE4wX29oQVpR</a></p>
+<h3 id="配置Xshell和Xftp"><a href="#配置Xshell和Xftp" class="headerlink" title="配置Xshell和Xftp"></a>配置Xshell和Xftp</h3><p>将云主机公网ip配置到Xshell和Xftp中</p>
+<p>连接主机</p>
+<h2 id="部署jdk"><a href="#部署jdk" class="headerlink" title="部署jdk"></a>部署jdk</h2><h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+
+<p>一站式安装轻轻松松，无需配置，用下面的命令查看是否安装成功</p>
+<figure class="highlight csharp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="安装tomcat"><a href="#安装tomcat" class="headerlink" title="安装tomcat"></a>安装tomcat</h2><h3 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h3><p>从tomcat官网下载.tar.gzd的安装包</p>
+<p><a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener">https://tomcat.apache.org/download-90.cgi</a></p>
+<p>通过Xftp拖进去，也可以在Ubuntu里直接下载，我放这个目录下</p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/</span><br></pre></td></tr></table></figure>
+
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>然后解压，个人喜好最新版，虽然可能不稳定</p>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">tar</span> <span class="hljs-selector-tag">-xvzf</span> <span class="hljs-selector-tag">apache-tomcat-9</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.29</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.gz</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h3><p>然后去开启服务</p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /apache-tomcat-9.0.29/bin</span><br><span class="line">./startup.sh</span><br></pre></td></tr></table></figure>
+
+<p>在本地访问http://公网ip:8080</p>
+<p>就能看到tomcat的页面</p>
+<p>若是访问失败可能是阿里云的防火墙需要新增规则</p>
+<p>自定义，TCP，8080</p>
+<p>然后就可以再次访问就可以了</p>
+<p>然后tomcat安装结束</p>
+<h2 id="Mysql安装"><a href="#Mysql安装" class="headerlink" title="Mysql安装"></a>Mysql安装</h2><h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><figure class="highlight csharp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="hljs-keyword">get</span> install mysql-server</span><br><span class="line">sudo apt-<span class="hljs-keyword">get</span> isntall mysql-client</span><br><span class="line">sudo apt-<span class="hljs-keyword">get</span> install libmysqlclient-dev</span><br></pre></td></tr></table></figure>
+
+<p>安装结束，其中需要输入密码，就是数据库的密码</p>
+<p>若没有让你输入密码，就有点麻烦了，具体请百度</p>
+<h3 id="开启数据库"><a href="#开启数据库" class="headerlink" title="开启数据库"></a>开启数据库</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure>
+
+<p>关闭数据库</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql stop</span><br></pre></td></tr></table></figure>
+
+<p>登录数据库,然后就能进行各种操作了</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署网站，上传war包"><a href="#部署网站，上传war包" class="headerlink" title="部署网站，上传war包"></a>部署网站，上传war包</h2><h3 id="准备war包"><a href="#准备war包" class="headerlink" title="准备war包"></a>准备war包</h3><p>先在项目里创建war包</p>
+<p>将项目war包利用Xftp传到tomcat的webapps目录下</p>
+<h3 id="启动tomcat"><a href="#启动tomcat" class="headerlink" title="启动tomcat"></a>启动tomcat</h3><p>然后重启tomcat，war包自动解压</p>
+<p>只要你的项目没问题，war包没问题</p>
+<p>然后就输入ip地址和项目包名就可以正常访问了</p>
+<h2 id="mysql的一些问题"><a href="#mysql的一些问题" class="headerlink" title="mysql的一些问题"></a>mysql的一些问题</h2><h3 id="改文件"><a href="#改文件" class="headerlink" title="改文件"></a>改文件</h3><p>先要注释掉bind-address=127.0.0.1</p>
+<p>打开这个文件</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
+
+<p>然后找到bind-address=127.0.0.1把他注释掉</p>
+<p>vim的操作就不多说了</p>
+<h3 id="mysql配置"><a href="#mysql配置" class="headerlink" title="mysql配置"></a>mysql配置</h3><p>然后登录mysql</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+
+<p>输入密码，然后运行</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br><span class="line"></span><br><span class="line">use mysql;</span><br><span class="line"></span><br><span class="line">update user set host=&apos;%&apos; where user=&apos;root&apos; and host=&apos;localhost&apos;; 	#将host设置为%表示任何ip都能连接mysql，当然您也可以将host指定为某个ip</span><br><span class="line"></span><br><span class="line">flush privileges;	#刷新权限表使之生效</span><br><span class="line"></span><br><span class="line">exit;	#退出去</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动mysql"><a href="#启动mysql" class="headerlink" title="启动mysql"></a>启动mysql</h3><p>然后启动mysql</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="阿里云配置"><a href="#阿里云配置" class="headerlink" title="阿里云配置"></a>阿里云配置</h3><p>然后再阿里云那边的防火墙新增规则</p>
+<p>开发端口3306<br>至此本地的sql客户端能连到云主机的mysql</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/云主机/">云主机</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        2019
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-11-23T07:03:56.000Z">2019-11-23</time>
-                        <a href="/2019/11/23/云主机部署Tomcat服务器/" class="title has-link-black-ter is-size-6 has-text-weight-normal">云主机部署Tomcat服务器</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/zhi.jpg" alt="支付宝"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-24T11:12:55.000Z">2019-10-24</time>
-                        <a href="/2019/10/24/关于递归形成Jtree目录树/" class="title has-link-black-ter is-size-6 has-text-weight-normal">关于递归形成Jtree目录树</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-16T11:45:00.000Z">2019-10-16</time>
-                        <a href="/2019/10/16/汇编/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编语言笔记</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wei.png" alt="微信"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-10-15T16:36:48.009Z">2019-10-16</time>
-                        <a href="/2019/10/16/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
         </div>
     </div>
 </div>
 
-    
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/24/关于递归形成Jtree目录树/">
+                <span class="level-item">关于递归形成Jtree目录树</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
 </div>
                 
 
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -289,6 +378,100 @@
 </div>
     
         
+<div class="card widget" id="toc" style="max-height: 500px;overflow: auto;">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#购买云主机">
+        <span class="has-mr-6">1</span>
+        <span>购买云主机</span>
+        </a></li><li>
+        <a class="is-flex" href="#Xshell和Xftp">
+        <span class="has-mr-6">2</span>
+        <span>Xshell和Xftp</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#配置Xshell和Xftp">
+        <span class="has-mr-6">2.1</span>
+        <span>配置Xshell和Xftp</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#部署jdk">
+        <span class="has-mr-6">3</span>
+        <span>部署jdk</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#更新源">
+        <span class="has-mr-6">3.1</span>
+        <span>更新源</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装jdk">
+        <span class="has-mr-6">3.2</span>
+        <span>安装jdk</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#安装tomcat">
+        <span class="has-mr-6">4</span>
+        <span>安装tomcat</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#下载安装包">
+        <span class="has-mr-6">4.1</span>
+        <span>下载安装包</span>
+        </a></li><li>
+        <a class="is-flex" href="#解压">
+        <span class="has-mr-6">4.2</span>
+        <span>解压</span>
+        </a></li><li>
+        <a class="is-flex" href="#开启服务">
+        <span class="has-mr-6">4.3</span>
+        <span>开启服务</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Mysql安装">
+        <span class="has-mr-6">5</span>
+        <span>Mysql安装</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#开始安装">
+        <span class="has-mr-6">5.1</span>
+        <span>开始安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#开启数据库">
+        <span class="has-mr-6">5.2</span>
+        <span>开启数据库</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#部署网站，上传war包">
+        <span class="has-mr-6">6</span>
+        <span>部署网站，上传war包</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#准备war包">
+        <span class="has-mr-6">6.1</span>
+        <span>准备war包</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动tomcat">
+        <span class="has-mr-6">6.2</span>
+        <span>启动tomcat</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#mysql的一些问题">
+        <span class="has-mr-6">7</span>
+        <span>mysql的一些问题</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#改文件">
+        <span class="has-mr-6">7.1</span>
+        <span>改文件</span>
+        </a></li><li>
+        <a class="is-flex" href="#mysql配置">
+        <span class="has-mr-6">7.2</span>
+        <span>mysql配置</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动mysql">
+        <span class="has-mr-6">7.3</span>
+        <span>启动mysql</span>
+        </a></li><li>
+        <a class="is-flex" href="#阿里云配置">
+        <span class="has-mr-6">7.4</span>
+        <span>阿里云配置</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
     
         <div class="card widget">
     <div class="card-content">
@@ -347,7 +530,7 @@
 </div>
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
+        <div class="column-right-shadow  ">
         
             <div class="card widget">
     <div class="card-content">
@@ -511,178 +694,6 @@
 </div>
         
         </div>
-    
-</div>
-
-                
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2019/11/23/云主机部署Tomcat服务器/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="云主机部署Tomcat服务器">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-23T07:03:56.000Z">2019-11-23</time></div>
-                    <a href="/2019/11/23/云主机部署Tomcat服务器/" class="title has-link-black-ter is-size-6 has-text-weight-normal">云主机部署Tomcat服务器</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/24/关于递归形成Jtree目录树/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="关于递归形成Jtree目录树">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-24T11:12:55.000Z">2019-10-24</time></div>
-                    <a href="/2019/10/24/关于递归形成Jtree目录树/" class="title has-link-black-ter is-size-6 has-text-weight-normal">关于递归形成Jtree目录树</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/16/汇编/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编语言笔记">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-16T11:45:00.000Z">2019-10-16</time></div>
-                    <a href="/2019/10/16/汇编/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编语言笔记</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学习/">学习</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/16/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-15T16:36:48.009Z">2019-10-16</time></div>
-                    <a href="/2019/10/16/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/11/">
-                <span class="level-start">
-                    <span class="level-item">十一月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/10/">
-                <span class="level-start">
-                    <span class="level-item">十月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/hello-world/">
-                        <span class="tag">hello world</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/swing/">
-                        <span class="tag">swing</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/云主机/">
-                        <span class="tag">云主机</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/汇编语言/">
-                        <span class="tag">汇编语言</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
     
 </div>
 
@@ -696,7 +707,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="KByte&#39;BLOG" height="28">
+                    <img src="/images/logo.svg" alt="云主机部署Tomcat服务器" height="28">
                 
                 </a>
                 <p class="is-size-7">
